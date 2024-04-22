@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+    <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,26 +12,31 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Rafael Dutra</title>
+    <title>Rafael Santos</title>
+    <script src="clock.js"></script>
     <link rel="shortcut icon" href="pasta.png" type="image/x-icon" />
 
     <style>
-      /* Estilo para o corpo da página */
-      body {
-        background-image: url("background.jpg"); /* URL da imagem de fundo */
-        background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o corpo */
-        background-position: center; /* Centraliza a imagem de fundo */
-        opacity: 50; /* Define a opacidade da imagem de fundo */
-      }
-
-      /* Estilo para o conteúdo da página */
+      
       .content {
-        padding: 20px; /* Espaçamento interno para o conteúdo */
-        color: white; /* Cor do texto para garantir legibilidade */
+        padding: 20px; /* Espaçamento interno  */
+        color: white; 
       }
-    </style>
 
-    <style>
+      .gradienteh3 {
+        background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      
+
+      html,
+      body {
+        height: 100%;
+        overflow: auto;
+      }
+
       /* Opacidade */
       body {
         opacity: 0;
@@ -51,9 +56,65 @@
       body {
         animation: fadeInAnimation 1s ease-in-out forwards;
       }
+
+      body {
+        color: #fff;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: #fff;
+      }
+
+      .link-lilas {
+        color: #0d1575;
+        text-shadow: 1px 1px 2px rgb(20, 126, 11);
+      }
+      .link-lilas:hover {
+        color: #2d4dff;
+        text-shadow: 1px 1px 1px rgb(168, 14, 14);
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      #rastreador-mouse {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+      }
+
+      body {
+        background: linear-gradient(
+          to right,
+          #14442c,
+          #045424,
+          #043c4c,
+          #08345c,
+          #042c6c
+        );
+      }
+
+      header {
+        margin-top: 30px;
+        padding-top: 30px;
+      }
     </style>
   </head>
   <body>
+    <!-- banner -->
+
     <div class="background">
       <header>
         <div class="logo">
@@ -71,21 +132,36 @@
           </li>
 
           <li>
-            <a href="#">Serviços</a>
+            <a href="#" target="_blank">Serviços</a>
           </li>
 
           <li>
-            <a href="#">Experiencia</a>
+            <a href="Experiencia.html" target="_blank">Experiencia</a>
           </li>
           <button class="btn" onclick="window.open('contato.html', '_blank');">
             Meu Contato
           </button>
         </div>
-        <!--cabeçalho-link-->
+        <!--cabeçalho-->
+      </header>
+
+      <header>
+        <a href="https://www.linkedin.com/in/rafaelsantoshome" target="_blank">
+          <img src="banner.png" width="800px" height="170px" />
+        </a>
       </header>
 
       <div class="container-text">
         <div class="text">
+          <a class="link-lilas" href="#final">Vá para o fim da página</a><br />
+
+          <div id="contador-visitas">
+            Quantidade de visitas: <span id="numero-visitas">0</span>
+          </div>
+
+          <div id="rastreador-mouse">Posição do mouse: (0, 0)</div>
+
+          <br />
           <h3>Olá, Pessoal</h3>
           <h1>Eu sou <span>Rafael Santos</span></h1>
           <h3>
@@ -141,13 +217,20 @@
             skills combinadas me capacitam a enfrentar diversas situações com
             confiança e excelência, agregando valor a qualquer projeto ou
             equipe.
-          </h5>
+          </h5><br>
+
+
+          <h2><span class="gradienteh3">Vídeo</span></h2>
+          <video width="400" height="320" controls>
+            <source src="vid.mp4" type="video/mp4">
+          </video><br>
+          
 
           <br />
-          <h2>Final <span>Thoughts</span></h2>
+          <h2 id="final">Final <span>Thoughts</span></h2>
           <h5>
             "Às vezes não é possível ver que um computador está errado, porque
-            ele faz coisas estúpidas em grande uma velocidade."
+            ele faz coisas estúpidas em uma grande velocidade."
           </h5>
 
           <div class="redes-social">
@@ -172,11 +255,21 @@
             onclick="window.open('sobre_mim.html', '_blank');"
           >
             Sobre Mim
-          </button>
+          </button><br><br>
 
-          <p><strong>Hora:</strong></p>
+          <h3>Global Times</h3>
+
+          <div class="relogio" id="relogio-ny"></div>
+          <div class="relogio" id="relogio-london"></div>
+          <div class="relogio" id="relogio-tokyo"></div><br>
+
+          <h3>Hora:<h3>
 
           <div id="clock">
+
+          <a href="Flashback - abr 15, 2024 00_49_50.mp4"></a>
+
+          
             <script>
               function updateClock() {
                 var date = new Date();
@@ -189,15 +282,49 @@
             </script>
           </div>
         </div>
-        <!---->
+        
       </div>
-      <!----->
+      
     </div>
-    <!---->
+    
 
     <script>
       alert("Seja bem-vindo!");
       window.prompt("Qual seu nome?");
+    </script>
+
+    <script>
+      function inicializarContadorVisitas() {
+        if (localStorage.getItem("visitas")) {
+          let visitas = parseInt(localStorage.getItem("visitas"));
+          document.getElementById("numero-visitas").textContent = visitas;
+        } else {
+          localStorage.setItem("visitas", "0");
+        }
+      }
+
+      function incrementarVisitas() {
+        let visitas = parseInt(localStorage.getItem("visitas")) + 1;
+        localStorage.setItem("visitas", visitas);
+        document.getElementById("numero-visitas").textContent = visitas;
+      }
+
+      window.onload = function () {
+        inicializarContadorVisitas();
+        incrementarVisitas();
+      };
+    </script>
+
+    <script>
+      function atualizarCoordenadasMouse(event) {
+        let x = event.pageX;
+        let y = event.pageY;
+        document.getElementById(
+          "rastreador-mouse"
+        ).textContent = `Posição do mouse: (${x}, ${y})`;
+      }
+
+      document.addEventListener("mousemove", atualizarCoordenadasMouse);
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
