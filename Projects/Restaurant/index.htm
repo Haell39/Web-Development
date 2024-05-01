@@ -3,7 +3,45 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Restraunt</title>
+    <title>NovaLua</title>
+
+    <style>
+      #palavraColorida {
+        background: linear-gradient(
+          to right,
+          violet,
+          indigo,
+          blue,
+          green,
+          yellow,
+          orange,
+          red
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+      }
+
+      /* Estilos padrão do botão */
+
+      /* Estilos padrão do botão */
+      .enviarbtn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #15796b;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+
+      /* Estilo para quando o botão é clicado */
+      .enviarbtn.clicked {
+        transform: scale(0.9); /* Reduzir o tamanho em 10% */
+      }
+    </style>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -24,19 +62,21 @@
         </div>
         <ul class="menu-items">
           <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#food">Category</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#food">Categorias</a></li>
           <li><a href="#food-menu">Menu</a></li>
-          <li><a href="#testimonials">Testimonial</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#testimonials">Depoimentos</a></li>
+          <li><a href="#contact">Nos contate</a></li>
         </ul>
-        <h1 class="logo">RS</h1>
+        <h1 class="logo">NovaLua</h1>
       </div>
     </nav>
     <section class="showcase-area" id="showcase">
       <div class="showcase-container">
-        <h1 class="main-title" id="home">Eat Right Food</h1>
-        <p>Eat Healty, it is good for our health.</p>
+        <h1 class="main-title" id="home">Alimentos saudáveis</h1>
+        <p class="paragrafo">
+          Alimento pro corpo, e pra <span id="palavraColorida">Alma</span>
+        </p>
         <a href="#food-menu" class="btn btn-primary">Menu</a>
       </div>
     </section>
@@ -44,62 +84,68 @@
     <section id="about">
       <div class="about-wrapper container">
         <div class="about-text">
-          <p class="small">About Us</p>
-          <h2>We've beem making healthy food last for 10 years</h2>
+          <p class="small">Sobre nós</p>
+          <h2>Fazendo pratos deliciosos e encantadores desde 2007</h2>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse ab
-            eos omnis, nobis dignissimos perferendis et officia architecto,
-            fugiat possimus eaque qui ullam excepturi suscipit aliquid optio,
-            maiores praesentium soluta alias asperiores saepe commodi
-            consequatur? Perferendis est placeat facere aspernatur!
+            Bem-vindo ao nosso cantinho gastronômico! Aqui, cada prato é uma
+            combinação perfeita entre sabor e saúde. Nossos chefs são
+            apaixonados por criar refeições deliciosas e nutritivas, usando
+            ingredientes frescos e locais sempre que possível. Venha nos visitar
+            e descubra como é possível se deliciar sem abrir mão da saúde!
           </p>
         </div>
         <div class="about-img">
-          <img src="https://i.postimg.cc/mgpwzmx9/about-photo.jpg" alt="food" />
+          <img src="comida1.png" alt="food" />
         </div>
       </div>
     </section>
     <section id="food">
-      <h2>Types of food</h2>
+      <h2>Tipos de comida</h2>
       <div class="food-container container">
         <div class="food-type fruite">
           <div class="img-container">
             <img src="https://i.postimg.cc/yxThVPXk/food1.jpg" alt="error" />
             <div class="img-content">
-              <h3>fruite</h3>
+              <h3>Frutas</h3>
               <a
                 href="https://en.wikipedia.org/wiki/Fruit"
                 class="btn btn-primary"
                 target="blank"
-                >learn more</a
+                >saiba mais</a
               >
             </div>
           </div>
         </div>
         <div class="food-type vegetable">
           <div class="img-container">
-            <img src="https://i.postimg.cc/Nffm6Rkk/food2.jpg" alt="error" />
+            <img
+              src="https://img.freepik.com/fotos-premium/alimentos-organicos-legumes-na-cesta_135427-2767.jpg"
+              alt="error"
+            />
             <div class="img-content">
-              <h3>vegetable</h3>
+              <h3>vegetais</h3>
               <a
                 href="https://en.wikipedia.org/wiki/Vegetable"
                 class="btn btn-primary"
                 target="blank"
-                >learn more</a
+                >saiba mais</a
               >
             </div>
           </div>
         </div>
         <div class="food-type grin">
           <div class="img-container">
-            <img src="https://i.postimg.cc/76ZwsPsd/food3.jpg" alt="error" />
+            <img
+              src="https://img.freepik.com/fotos-premium/frutos-do-mar-frescos-e-peixes-em-um-fundo-preto-rustico_410516-47324.jpg"
+              alt="error"
+            />
             <div class="img-content">
-              <h3>grin</h3>
+              <h3>Frutos do mar</h3>
               <a
                 href="https://en.wikipedia.org/wiki/Grain"
                 class="btn btn-primary"
                 target="blank"
-                >learn more</a
+                >saiba mais</a
               >
             </div>
           </div>
@@ -107,14 +153,14 @@
       </div>
     </section>
     <section id="food-menu">
-      <h2 class="food-menu-heading">Food Menu</h2>
+      <h2 class="food-menu-heading">Menu</h2>
       <div class="food-menu-container container">
         <div class="food-menu-item">
           <div class="food-img">
             <img src="https://i.postimg.cc/wTLMsvSQ/food-menu1.jpg" alt="" />
           </div>
           <div class="food-description">
-            <h2 class="food-titile">Food Menu Item 1</h2>
+            <h2 class="food-titile">Salada</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
               quae.
@@ -126,12 +172,12 @@
         <div class="food-menu-item">
           <div class="food-img">
             <img
-              src="https://i.postimg.cc/sgzXPzzd/food-menu2.jpg"
+              src="https://images2.alphacoders.com/134/1345260.png"
               alt="error"
             />
           </div>
           <div class="food-description">
-            <h2 class="food-titile">Food Menu Item 2</h2>
+            <h2 class="food-titile">Açaí da lua</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
               quae.
@@ -141,10 +187,13 @@
         </div>
         <div class="food-menu-item">
           <div class="food-img">
-            <img src="https://i.postimg.cc/8zbCtYkF/food-menu3.jpg" alt="" />
+            <img
+              src="https://img.freepik.com/fotos-premium/prato-de-frutos-do-mar-e-filete-de-peixe-salmao-filete-de-atum-filete-de-polvo-lula-caranguejo-grelhado-marisco_71956-3699.jpg"
+              alt=""
+            />
           </div>
           <div class="food-description">
-            <h2 class="food-titile">Food Menu Item 3</h2>
+            <h2 class="food-titile">Salmão azul</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
               quae.
@@ -154,10 +203,13 @@
         </div>
         <div class="food-menu-item">
           <div class="food-img">
-            <img src="https://i.postimg.cc/Yq98p5Z7/food-menu4.jpg" alt="" />
+            <img
+              src="https://media-cdn.tripadvisor.com/media/photo-s/0e/c5/ba/27/lagosta-ao-forno-com.jpg"
+              alt=""
+            />
           </div>
           <div class="food-description">
-            <h2 class="food-titile">Food Menu Item 4</h2>
+            <h2 class="food-titile">Lagosta real</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
               quae.
@@ -167,10 +219,13 @@
         </div>
         <div class="food-menu-item">
           <div class="food-img">
-            <img src="https://i.postimg.cc/KYnDqxkP/food-menu5.jpg" alt="" />
+            <img
+              src="https://f.i.uol.com.br/fotografia/2023/07/31/169081321064c7c31a72504_1690813210_3x2_rt.jpg"
+              alt=""
+            />
           </div>
           <div class="food-description">
-            <h2 class="food-titile">Food Menu Item 5</h2>
+            <h2 class="food-titile">Salada de legume e frutas</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
               quae.
@@ -180,10 +235,13 @@
         </div>
         <div class="food-menu-item">
           <div class="food-img">
-            <img src="https://i.postimg.cc/Jnxc8xQt/food-menu6.jpg" alt="" />
+            <img
+              src="https://img.freepik.com/fotos-premium/selecao-de-frutas-exoticas-generativa-ai_197463-3176.jpg"
+              alt=""
+            />
           </div>
           <div class="food-description">
-            <h2 class="food-titile">Food Menu Item 6</h2>
+            <h2 class="food-titile">frutas exóticas</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
               quae.
@@ -194,13 +252,16 @@
       </div>
     </section>
     <section id="testimonials">
-      <h2 class="testimonial-title">What Our Customers Say</h2>
+      <h2 class="testimonial-title">O que nossos clientes dizem:</h2>
       <div class="testimonial-container container">
         <div class="testimonial-box">
           <div class="customer-detail">
             <div class="customer-photo">
-              <img src="https://i.postimg.cc/5Nrw360Y/male-photo1.jpg" alt="" />
-              <p class="customer-name">Ross Lee</p>
+              <img
+                src="https://i.pinimg.com/736x/fd/fc/ef/fdfcefc24e58a4e3ed4dd6099d530353.jpg"
+                alt=""
+              />
+              <p class="customer-name">Marcos Sulivan</p>
             </div>
           </div>
           <div class="star-rating">
@@ -219,10 +280,10 @@
           <div class="customer-detail">
             <div class="customer-photo">
               <img
-                src="https://i.postimg.cc/sxd2xCD2/female-photo1.jpg"
+                src="https://conteudo.imguol.com.br/c/noticias/62/2023/04/13/imagem-de-claudia-foi-gerada-a-partir-de-descricao-simples-em-ferramenta-de-ia-1681400857164_v2_1x1.jpg"
                 alt=""
               />
-              <p class="customer-name">Amelia Watson</p>
+              <p class="customer-name">Emilia None</p>
             </div>
           </div>
           <div class="star-rating">
@@ -240,12 +301,14 @@
         <div class="testimonial-box">
           <div class="customer-detail">
             <div class="customer-photo">
-              <img src="https://i.postimg.cc/fy90qvkV/male-photo3.jpg" alt="" />
-              <p class="customer-name">Ben Roy</p>
+              <img
+                src="https://img.freepik.com/fotos-premium/atraente-jovem-homem-bonito-modelo-de-moda-em-fundo-urbano_3179-168.jpg"
+                alt=""
+              />
+              <p class="customer-name">Felipe Araujo</p>
             </div>
           </div>
           <div class="star-rating">
-            <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
@@ -261,24 +324,28 @@
     <section id="contact">
       <div class="contact-container container">
         <div class="contact-img">
-          <img src="https://i.postimg.cc/1XvYM67V/restraunt2.jpg" alt="" />
+          <img
+            src="https://envato-shoebox-0.imgix.net/de04/73de-2db0-4f1e-99f0-fa7fd58b7f7a/poke7_filtered.jpg?auto=compress%2Cformat&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&w=700&fit=max&markalign=center%2Cmiddle&markalpha=18&s=842b82832cd6bc590713eff31a973965"
+            alt=""
+          />
         </div>
 
         <div class="form-container">
-          <h2>Contact Us</h2>
-          <input type="text" placeholder="Your Name" />
-          <input type="email" placeholder="E-Mail" />
+          <h2>Nos contate</h2>
+          <input type="text" placeholder="Seu nome:" />
+          <input type="email" placeholder="E-Mail:" />
           <textarea
             cols="30"
             rows="6"
-            placeholder="Type Your Message"
+            placeholder="Digite sua mensagem:"
           ></textarea>
-          <a href="#" class="btn btn-primary">Submit</a>
+
+          <button class="enviarbtn" id="btnEnviar">Enviar</button>
         </div>
       </div>
     </section>
     <footer id="footer">
-      <h2>Restraunt &copy; all rights reserved</h2>
+      <h2>NovaLua &copy; todos direitos reservados</h2>
     </footer>
   </body>
   <!-- 
@@ -286,6 +353,23 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script>
+    // JavaScript para adicionar a classe 'clicked' quando o botão é clicado
+    $(".enviarbtn").click(function () {
+      $(this).toggleClass("clicked");
+    });
+
+    $("#btnEnviar").click(function () {
+      $(this).animate({
+        opacity: 0.2,
+      });
+      $(this).animate(
+        {
+          opacity: 1,
+        },
+        1000
+      );
+    });
+
     $(document).ready(function () {
       // Add smooth scrolling to all links
       $("a").on("click", function (event) {
