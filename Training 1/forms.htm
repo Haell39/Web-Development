@@ -8,6 +8,11 @@
   <style>
     p {
       font-size: 20px;
+      text-align: center;
+    }
+
+    form {
+      color: rgb(0, 0, 0);
     }
   </style>
   <body>
@@ -60,6 +65,295 @@
       />
       <label for="vehicle3"> I have a boat</label><br /><br />
       <input type="submit" value="Submit" />
+    </form>
+
+    <p>HTML Attributes</p>
+    <br />
+
+    <form
+      action="/submit_form"
+      method="POST"
+      name="exampleForm"
+      autocomplete="on"
+      target="_blank"
+    >
+      <label for="username">Username:</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        autocomplete="username"
+      />
+      <br />
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        autocomplete="current-password"
+      />
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+
+    <p>HTML Elements</p>
+
+    <!-- form: usa a tag <form> para criar um formulário
+         - action: define o endereço do servidor para onde o formulário será enviado
+         - method: define o método de envio. Valores possíveis: GET, POST, PUT, DELETE
+    -->
+    <form action="/submit_form" method="POST">
+      <!-- label: usa a tag <label> para criar um rótulo para um elemento de formulário
+           - for: define o id do elemento de formulário ao qual o rótulo se refere
+      -->
+      <label for="name">Name:</label>
+      <!-- input: usa a tag <input> para criar um campo de texto
+           - type: define o tipo de campo de texto. Valores possíveis: text, password, email, date, etc
+           - id e name: define o id e o nome do campo de formulário
+      -->
+      <input type="text" id="name" name="name" />
+      <br />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" />
+      <br />
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" />
+      <br />
+      <!-- select: usa a tag <select> para criar um campo de seleção
+           - id e name: define o id e o nome do campo de formulário
+           - option: define as opções disponíveis para o campo de seleção
+      -->
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      <br />
+      <!-- textarea: usa a tag <textarea> para criar um campo de texto grande
+           - id e name: define o id e o nome do campo de formulário
+      -->
+      <label for="message">Message:</label>
+      <textarea id="message" name="message"></textarea>
+      <br />
+      <!-- fieldset: usa a tag <fieldset> para agrupar elementos de formulário
+           - legend: define o título do campo
+      -->
+      <fieldset>
+        <legend>Newsletter Subscription:</legend>
+        <!-- checkbox: usa a tag <input> do tipo checkbox para criar um campo de seleção
+             - id e name: define o id e o nome do campo de formulário
+        -->
+        <label for="subscribe">
+          <input type="checkbox" id="subscribe" name="subscribe" />
+          Subscribe
+        </label>
+        <br />
+        <!-- select: usa a tag <select> para criar um campo de seleção
+             - id e name: define o id e o nome do campo de formulário
+        -->
+        <label for="newsletter-frequency">
+          Newsletter Frequency:
+          <select id="newsletter-frequency" name="newsletter-frequency">
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+          </select>
+        </label>
+      </fieldset>
+      <br />
+      <!-- datalist: usa a tag <datalist> para fornecer opções para um campo de texto
+           - id: define o id do campo de texto
+           - option: define as opções disponíveis para o campo de texto
+      -->
+      <label for="favorite-color">Favorite Color:</label>
+      <input
+        type="text"
+        list="colors"
+        id="favorite-color"
+        name="favorite-color"
+      />
+      <datalist id="colors">
+        <option value="red"></option>
+        <option value="green"></option>
+        <option value="blue"></option>
+      </datalist>
+
+      <br />
+      <!-- button: usa a tag <button> para criar um botão de submit
+           - type: define o tipo do botão. Valores possíveis: submit, reset, button
+      -->
+      <button type="submit">Submit</button>
+    </form>
+
+    <section>
+      <p>HTML Input Types</p>
+
+      <form>
+        <label for="text">Text:</label>
+        <input type="text" id="text" name="text" />
+        <br />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" />
+        <br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+        <br />
+        <label for="number">Number:</label>
+        <input type="number" id="number" name="number" />
+        <br />
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" />
+        <br />
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" />
+        <br />
+        <label for="datetime-local">Datetime Local:</label>
+        <input
+          type="datetime-local"
+          id="datetime-local"
+          name="datetime-local"
+        />
+        <br />
+        <label for="checkbox">Checkbox:</label>
+        <input type="checkbox" id="checkbox" name="checkbox" />
+        <br />
+        <label for="radio">Radio:</label>
+        <input type="radio" id="radio1" name="radio" value="option1" />
+        <label for="radio1">Option 1</label>
+        <input type="radio" id="radio2" name="radio" value="option2" />
+        <label for="radio2">Option 2</label>
+        <br />
+        <label for="file">File:</label>
+        <input type="file" id="file" name="file" />
+        <br />
+        <label for="submit">Submit:</label>
+        <input type="submit" id="submit" name="submit" value="Submit" />
+        <br />
+        <label for="reset">Reset:</label>
+        <input type="reset" id="reset" name="reset" value="Reset" />
+        <br />
+        <label for="button">Button:</label>
+        <input type="button" id="button" name="button" value="Button" />
+        <br />
+        <label for="image">Image:</label>
+        <input type="image" src="image.png" alt="Image" />
+        <br />
+        <label for="hidden">Hidden:</label>
+        <input type="hidden" id="hidden" name="hidden" value="hidden value" />
+        <br />
+        <label for="range">Range:</label>
+        <input
+          type="range"
+          id="range"
+          name="range"
+          min="0"
+          max="100"
+          step="10"
+        />
+        <br />
+        <label for="color">Color:</label>
+        <input type="color" id="color" name="color" />
+        <br />
+        <label for="search">Search:</label>
+        <input type="search" id="search" name="search" />
+        <br />
+        <label for="tel">Telephone:</label>
+        <input type="tel" id="tel" name="tel" />
+        <br />
+        <label for="url">URL:</label>
+        <input type="url" id="url" name="url" />
+        <br />
+        <label for="week">Week:</label>
+        <input type="week" id="week" name="week" />
+        <br />
+        <label for="month">Month:</label>
+        <input type="month" id="month" name="month" />
+      </form>
+    </section>
+
+    <p>HTML Input Attributes</p>
+
+    <form>
+      <label for="username">Nome de Usuário:</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Digite seu nome de usuário"
+        required
+        autofocus
+        maxlength="20"
+      />
+
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Digite seu email"
+        required
+        autocomplete="email"
+      />
+
+      <label for="password">Senha:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Digite sua senha"
+        required
+        minlength="8"
+      />
+
+      <label for="phone">Telefone:</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="Digite seu telefone"
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+        maxlength="12"
+      />
+
+      <label for="age">Idade:</label>
+      <input type="number" id="age" name="age" min="18" max="100" step="1" />
+
+      <label for="file">Selecione um arquivo:</label>
+      <input
+        type="file"
+        id="file"
+        name="file"
+        accept=".pdf,.doc,.docx"
+        multiple
+      />
+
+      <label for="color">Cor favorita:</label>
+      <input type="color" id="color" name="color" value="#ff0000" />
+
+      <label for="terms">Aceitar os termos:</label>
+      <input type="checkbox" id="terms" name="terms" required checked />
+
+      <label for="city">Cidade:</label>
+      <input list="cities" name="city" id="city" />
+      <datalist id="cities">
+        <option value="New York"></option>
+        <option value="Los Angeles"></option>
+        <option value="Chicago"></option>
+        <option value="San Francisco"></option>
+      </datalist>
+
+      <label for="bio">Biografia:</label>
+      <textarea
+        id="bio"
+        name="bio"
+        placeholder="Escreva algo sobre você"
+        rows="4"
+        cols="50"
+        maxlength="200"
+        required
+      ></textarea>
+
+      <button type="submit">Enviar</button>
     </form>
   </body>
 </html>
