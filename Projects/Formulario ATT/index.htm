@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+  </head>
+
+  <style>
+    form {
+      color: rgb(0, 0, 0);
+      padding: 20px;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    input[type="text"],
+    input[type="submit"] {
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #e72121;
+      color: white;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #be3434;
+    }
+  </style>
+  <body>
+    <form>
+      <label for="fname">Name:</label><br />
+      <input type="text" id="fname" name="fname" value="John" /><br />
+      <label for="email">E-MAIL:</label><br />
+      <input type="text" id="lname" name="lname" value="Doe" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
