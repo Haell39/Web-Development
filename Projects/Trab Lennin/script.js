@@ -45,3 +45,17 @@ function validateForm() {
   alert("Obrigado pelo seu feedback!");
   return true;
 }
+
+//* Mouse
+
+document.addEventListener("mousemove", (e) => {
+  const sparkle = document.createElement("div");
+  sparkle.classList.add("sparkle");
+  sparkle.style.top = `${e.clientY}px`;
+  sparkle.style.left = `${e.clientX}px`;
+  document.getElementById("sparkles").appendChild(sparkle);
+  // Remove o brilho após algum tempo
+  setTimeout(() => {
+    sparkle.remove();
+  }, 1000); // Remove o brilho após 1 segundo
+});
