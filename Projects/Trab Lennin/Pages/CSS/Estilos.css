@@ -441,7 +441,7 @@ button:hover {
   height: 8px;
   background-color: #ce6e2e; /* Cor rosa para os brilhos */
   border-radius: 50%;
-  pointer-events: none; /* Garante que os brilhos não interfiram com os cliques */
+  pointer-events: none; /* para Garantir que os brilhos não interfiram com os cliques */
   transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-  z-index: 9999; /* Coloca os brilhos sobre todos os outros elementos */
+  z-index: 9999; /* Colocar os brilhos sobre todos os outros elementos */
 }

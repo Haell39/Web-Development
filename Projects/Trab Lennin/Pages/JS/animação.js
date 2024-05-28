@@ -1,9 +1,9 @@
-// Menu Responsivo
+// fazer um menu mais responsivo
 document.querySelector(".menu-toggle").addEventListener("click", () => {
     document.querySelector(".list-menu").classList.toggle("show");
   });
   
-  // Animações de Rolagem Suave
+  // rolagem suave
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
@@ -13,7 +13,7 @@ document.querySelector(".menu-toggle").addEventListener("click", () => {
     });
   });
   
-  // Verifica se estamos na página inicial
+  // Para verificar se estou na pag inicial
   const isIndexPage =
     window.location.pathname.endsWith("index.html") ||
     window.location.pathname === "/";
@@ -24,17 +24,17 @@ document.querySelector(".menu-toggle").addEventListener("click", () => {
       const hasSeenWelcomeMessage = localStorage.getItem("hasSeenWelcomeMessage");
   
       if (!hasSeenWelcomeMessage) {
-        // Mostra a mensagem de boas-vindas
+        // Mostra a mensagem 
         setTimeout(() => {
           alert("Bem-vindo à Toca Do Sabor!");
-          // Marca que a mensagem já foi exibida
+          // marcar a msg pro computador entender que ja foi exibida
           localStorage.setItem("hasSeenWelcomeMessage", "true");
         }, 1000);
       }
     };
   }
   
-  // Formulário de Avaliação (Simulação)
+  // Formulário de Avaliação (sem data base ainda!)
   function validateForm() {
     const name = document.querySelector("#name").value;
     const feedback = document.querySelector("#feedback").value;
@@ -57,6 +57,6 @@ document.querySelector(".menu-toggle").addEventListener("click", () => {
     // Remove o brilho após algum tempo
     setTimeout(() => {
       sparkle.remove();
-    }, 1000); // Remove o brilho após 1 segundo
+    }, 1000); // Remove o brilho após 1 segundo 
   });
   
