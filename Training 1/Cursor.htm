@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alterar Estilo do Cursor</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+  }
+  .cursor-button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #333;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+  #meuElemento {
+    width: 300px;
+    height: 200px;
+    background-color: #e0e0e0;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div>
+  <button class="cursor-button" onclick="alterarCursor('default')">Cursor Padrão</button>
+  <button class="cursor-button" onclick="alterarCursor('pointer')">Cursor Ponteiro</button>
+  <button class="cursor-button" onclick="alterarCursor('help')">Cursor Ajuda</button>
+  <button class="cursor-button" onclick="alterarCursor('grab')">Cursor Mão</button>
+</div>
+
+<div id="meuElemento">
+  <p>Hover over this box to see the cursor change!</p>
+</div>
+
+<script>
+function alterarCursor(cursorStyle) {
+  const elemento = document.getElementById('meuElemento');
+  
+  switch(cursorStyle) {
+    case 'default':
+      elemento.style.cursor = 'default';
+      break;
+    case 'pointer':
+      elemento.style.cursor = 'pointer';
+      break;
+    case 'help':
+      elemento.style.cursor = 'help';
+      break;
+    case 'grab':
+      elemento.style.cursor = 'grab';
+      break;
+    default:
+      elemento.style.cursor = 'auto';
+  }
+}
+</script>
+
+</body>
+</html>
