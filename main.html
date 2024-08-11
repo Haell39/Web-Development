@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lo-fi Music</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lo-fi Music Player</h1>
+        <div class="music-list">
+            <button onclick="playMusic('sample-music.mp3')">Play Sample Music</button>
+        </div>
+        <audio id="audioPlayer" controls></audio>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
