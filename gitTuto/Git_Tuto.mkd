@@ -1,0 +1,75 @@
+
+## Principais Comandos Git
+
+1. **`git init`**
+   - Inicializa um novo repositório Git em um diretório. Este é o primeiro comando a ser usado para começar a versionar um projeto.
+   ```bash
+   git init
+   ```
+
+2. **`git clone <url>`**
+   - Clona um repositório remoto para o seu ambiente local. É uma maneira comum de obter uma cópia de um projeto existente.
+   ```bash
+   git clone https://github.com/usuario/repositorio.git
+   ```
+
+3. **`git add <arquivo>`**
+   - Adiciona alterações específicas à área de staging, preparando-as para o próximo commit. Você pode adicionar um único arquivo ou todos os arquivos com `git add .`.
+   ```bash
+   git add arquivo.txt
+   ```
+
+4. **`git commit -m "mensagem"`**
+   - Registra as alterações na área de staging no repositório local, com uma mensagem descritiva sobre o que foi alterado.
+   ```bash
+   git commit -m "Adiciona nova funcionalidade"
+   ```
+
+5. **`git status`**
+   - Mostra o estado atual do repositório, incluindo arquivos modificados, não rastreados e prontos para commit.
+   ```bash
+   git status
+   ```
+
+6. **`git push <remoto> <branch>`**
+   - Envia commits do repositório local para um repositório remoto, como o GitHub.
+   ```bash
+   git push origin main
+   ```
+
+7. **`git pull`**
+   - Faz o download das alterações do repositório remoto e as mescla com a branch atual. É uma combinação de `git fetch` e `git merge`.
+   ```bash
+   git pull origin main
+   ```
+
+8. **`git branch`**
+   - Lista todas as branches no repositório. Você também pode criar novas branches com `git branch <nome-da-branch>`.
+   ```bash
+   git branch
+   ```
+
+9. **`git checkout <branch>`**
+   - Muda para a branch especificada, permitindo que você trabalhe em diferentes partes do projeto.
+   ```bash
+   git checkout feature-nova
+   ```
+
+10. **`git merge <branch>`**
+    - Mescla as alterações de uma branch específica na branch atual. Isso é usado frequentemente após finalizar o trabalho em uma feature.
+    ```bash
+    git merge feature-nova
+    ```
+
+11. **`git revert <commit>`**
+    - Cria um novo commit que desfaz as alterações feitas em um commit anterior, útil para corrigir erros.
+    ```bash
+    git revert abc1234
+    ```
+
+12. **`git reset HEAD <arquivo>`**
+    - Remove um arquivo da área de staging, mantendo as alterações no diretório de trabalho.
+    ```bash
+    git reset HEAD arquivo.txt
+    ```
+
